@@ -1,8 +1,8 @@
 package com.jackbaron.deathswap;
 
 import com.jackbaron.deathswap.utils.Chat;
-
 import com.jackbaron.deathswap.utils.Rand;
+
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -10,10 +10,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public final class DeathSwap {
