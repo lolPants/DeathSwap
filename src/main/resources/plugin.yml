@@ -1,0 +1,29 @@
+name: DeathSwap
+version: '0.1.0'
+
+main: com.jackbaron.deathswap.Plugin
+api-version: '1.16'
+
+author: lolPants
+website: https://github.com/lolPants/DeathSwap
+
+description: |
+  Plugin that implements the popular "Death Swap" gamemode.
+  Can be played with any number of people.
+
+commands:
+  deathswap:
+    description: Main DeathSwap command
+
+permissions:
+  deathswap.*:
+    description: All DeathSwap commands
+    children:
+      deathswap.about:
+        description: View DeathSwap info
+      deathswap.start:
+        description: Start DeathSwap gamemode
+      deathswap.stop:
+        description: Stop DeathSwap gamemode
+      deathswap.force:
+        description: Force a Swap
