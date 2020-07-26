@@ -24,11 +24,20 @@ public final class Plugin extends JavaPlugin {
         logger = this.getLogger();
         manager = new DeathSwap();
 
-        PluginCommand mainCommand = Objects.requireNonNull(getCommand("deathswap"));
+        registerCommands();
+        setupHandler();
+    }
+
+    private void registerCommands() {
         CommandManager.registerDefaultCommand(new About());
+
         CommandManager.registerSubCommand(new Start());
         CommandManager.registerSubCommand(new Stop());
         CommandManager.registerSubCommand(new Force());
+    }
+
+    private void setupHandler() {
+        PluginCommand mainCommand = Objects.requireNonNull(getCommand("deathswap"));
 
         mainCommand.setExecutor((sender, command, name, args) -> {
             if (args.length == 0) {
